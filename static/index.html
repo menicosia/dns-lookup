@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <base href="/">
+    <title>DNS Lookup</title>
+    <script src="lookup-client.js"></script>
+    <link rel="stylesheet" href="tables.css">
+  </head>
+  <body>
+    <h1>DNS Lookup</h1>
+    <table id="dnsLookup" border=1>
+      <tr>
+        <form action="write" method="resolve">
+          <td><input type="text" name="key" /></td>
+          <td id="value"></td>
+          <td><button type="submit">Resolve</button></td></tr>
+    </table>
+  </body>
+</html>
