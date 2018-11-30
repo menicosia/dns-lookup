@@ -29,7 +29,7 @@ curl 'http://localhost:8080/json/resolve?host=www.yahoo.com'
 
 **Web UI**
 
-![dns lookup screenshot](dns-lookup-webUI.png]
+![dns lookup screenshot](dns-lookup-webUI.png)
 
 ### Usage
 
