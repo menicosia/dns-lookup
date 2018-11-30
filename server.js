@@ -9,18 +9,17 @@ if (process.env.VCAP_APP_PORT) { port = process.env.VCAP_APP_PORT ; }
 else if (process.env.PORT) { port = process.env.PORT ; }
 
 function lookupHelper(err, addr, family, response) {
-    console.log("Received resolve response") ;
-    response.end(addr) ;
+    if (err) {
+        response.end(JSON.stringify(false)) }
+    else {
+        response.end(JSON.stringify(addr) + "\n")
+    }
 }
 
 function doLookup(response, host) {
     console.log("Resolving: " + host) ;
     dns.lookup(host, function (err, addr, family) {
-        if (err) {
-            response.end(JSON.stringify(false)) }
-        else {
-            response.end(JSON.stringify(addr))
-        }
+        lookupHelper(err, addr, family, response) ;
     }) ;
 }
 
