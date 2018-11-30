@@ -16,7 +16,11 @@ function lookupHelper(err, addr, family, response) {
 function doLookup(response, host) {
     console.log("Resolving: " + host) ;
     dns.lookup(host, function (err, addr, family) {
-        response.end(JSON.stringify(addr))
+        if (err) {
+            response.end(JSON.stringify(false)) }
+        else {
+            response.end(JSON.stringify(addr))
+        }
     }) ;
 }
 
