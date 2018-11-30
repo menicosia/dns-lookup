@@ -25,14 +25,6 @@ function doLookup(response, host) {
 
 function dispatchApi(request, response, method, query) {
     switch (method) {
-    case "dbstatus":
-        if (dbConnectState) {
-            doStatus(request, response) ;
-        } else {
-            data += "I'm sorry, Dave, I can't do that. No connection to database." ;
-            response.end(data) ;
-        }
-        break ;
     case "resolve":
         if ("" != query['host']) {
             console.log("Received request to resolve: " + query['host']) ;
