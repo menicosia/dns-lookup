@@ -5,10 +5,10 @@
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "serve-static": "1.x.x",
-    "finalhandler": "1.1.x"
+    "finalhandler": "1.x.x"
   },
   "engines": {
-    "node": "8.x"
+    "node": "13.x"
   },
   "repository": {
     "type": "git",
