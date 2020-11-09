@@ -1,6 +1,7 @@
 ---
 applications:
 - name: dns-lookup
-  buildpack: nodejs_buildpack
+  buildpacks: 
+    - nodejs_buildpack
   memory: 128M
 
